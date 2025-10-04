@@ -1,0 +1,13 @@
+services:
+  kafka-ui:
+    image: provectuslabs/kafka-ui:latest
+    container_name: kafka-ui2
+    ports:
+      - "8080:8080"
+    environment:
+      KAFKA_CLUSTERS_0_NAME: local
+      KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: localhost:9092,localhost:9093,localhost:9094
+      KAFKA_CLUSTERS_0_ZOOKEEPER: localhost:2181
+# git link
+# https://github.com/conduktor/kafka-stack-docker-compose/blob/master/zk-multiple-kafka-multiple.yml
+

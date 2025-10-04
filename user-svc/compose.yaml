@@ -1,0 +1,15 @@
+services:
+  usersvc:
+    image: usersvc:latest
+    container_name: usersvc
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 8080:8080
+    networks:
+      - shared-network-expense
+
+networks:
+  shared-network-expense:
+    external: true
